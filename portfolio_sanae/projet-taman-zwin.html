@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TAMAN ZWIN | Présentation du projet</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #293247;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #a5b4fc;
+    }
+
+    .back-link {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 85px 0 60px;
+    }
+
+    .eyebrow {
+      color: #a5b4fc;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    .gradient {
+      color: #a5b4fc;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: #cbd5e1;
+      font-size: 1.08rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .tag {
+      padding: 7px 13px;
+      background: #192238;
+      border: 1px solid #34415d;
+      border-radius: 30px;
+      font-size: 0.85rem;
+    }
+
+    section {
+      padding: 45px 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: #cbd5e1;
+      max-width: 800px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .feature, .gallery-item, .tech-card {
+      background: #121a2d;
+      border: 1px solid #293750;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .feature {
+      padding: 22px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature p, .gallery-item p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #1e293b;
+    }
+
+    .gallery-item figcaption {
+      padding: 18px;
+    }
+
+    .gallery-item h3 {
+      margin-bottom: 7px;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .tech-card {
+      padding: 12px 18px;
+    }
+
+    .contact {
+      margin: 35px 0 65px;
+      padding: 30px;
+      border-radius: 18px;
+      background: #151f35;
+      border: 1px solid #34415d;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 8px 0 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 9px;
+      background: #818cf8;
+      color: #0b1020;
+      font-weight: bold;
+      cursor:text;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid #293247;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 650px) {
+      .features, .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html">Mon Portfolio</a>
+      <a class="back-link" href="index.html">
+        ← Retour au portfolio
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Projet de développement web</p>
+
+        <h1>
+          TAMAN <span class="gradient">ZWIN</span>
+        </h1>
+
+        <p class="intro">
+          Conception et développement d'une application e-commerce
+          dédiée à la vente de vêtements. Le projet permet de consulter
+          les produits, gérer un panier et suivre les commandes à travers
+          une interface simple et intuitive.
+        </p>
+
+        <div class="tags">
+          <span class="tag">E-commerce</span>
+          <span class="tag">Développement web</span>
+          <span class="tag">Projet académique</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>À propos du projet</h2>
+
+        <p class="description">
+          TAMAN ZWIN est une boutique en ligne de vêtements.
+          L'application comprend un catalogue organisé par catégories,
+          des pages de détails des produits, un panier d'achat et un
+          système de gestion des commandes. Une interface
+          d'administration permet également de gérer la boutique.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Fonctionnalités principales</h2>
+
+        <div class="features">
+          <article class="feature">
+            <h3>Catalogue de vêtements</h3>
+            <p>
+              Consultation des produits et navigation par catégories :
+              femme, homme, junior et sport.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Panier d'achat</h3>
+            <p>
+              Ajout des articles au panier et préparation
+              de la commande.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Gestion des commandes</h3>
+            <p>
+              Enregistrement des commandes avec paiement à la livraison
+              et suivi de leur statut.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Espace administrateur</h3>
+            <p>
+              Gestion des produits et suivi des commandes
+              avec un accès réservé à l'administrateur.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="captures">
+      <div class="container">
+        <h2>Captures d'écran du projet</h2>
+
+        <p class="description">
+          Découvrez quelques interfaces de l'application TAMAN ZWIN.
+        </p>
+
+        <div class="gallery">
+
+          <figure class="gallery-item">
+            <img
+              src="images/image.png"
+              alt="Page d'accueil de TAMAN ZWIN"
+              loading="lazy"
+            >
+            <figcaption>
+              <h3>Page d'accueil</h3>
+              <p>
+                Présentation de la boutique et accès aux produits.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="images/produitpageTMNZ.png"
+              alt="Catalogue des vêtements"
+              loading="lazy"
+            >
+            <figcaption>
+              <h3>Catalogue des produits</h3>
+              <p>
+                Affichage des vêtements et de leurs informations.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="images/Screenshot 2026-10-17 200445.png"
+              alt="Panier d'achat de la boutique"
+              loading="lazy"
+            >
+            <figcaption>
+              <h3>Panier et commandes</h3>
+              <p>
+                Interface de consultation du panier et de préparation
+                des commandes.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img
+              src="images/Screenshot 2026-10-17 200554.png"
+              alt="Interface d'administration"
+              loading="lazy"
+            >
+            <figcaption>
+              <h3>Administration</h3>
+              <p>
+                Interface de gestion des produits et des commandes.
+              </p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Technologies utilisées</h2>
+
+        <p class="description">
+          Les technologies utilisées pour concevoir et développer
+          l'application.
+        </p>
+
+        <div class="tech-list">
+          <span class="tech-card">HTML5</span>
+          <span class="tech-card">CSS3</span>
+          <span class="tech-card">PHP</span>
+          <span class="tech-card">MySQL</span>
+          <span class="tech-card">PDO</span>
+          <span class="tech-card">JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact">
+        <h2>Intéressé par ce projet ?</h2>
+        <p>
+          Pour en savoir plus sur la conception et les fonctionnalités
+          de TAMAN ZWIN, contactez-moi par e-mail.
+        </p>
+
+        <a
+          class="button"
+         
+        >
+    sanaeboucham@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      TAMAN ZWIN — Projet de développement web
+    </div>
+  </footer>
+
+</body>
+</html>

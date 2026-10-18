@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Sanae Boucham, développeuse informatique.">
+  <meta name="theme-color" content="#fffaf5">
+  <title>Sanae Boucham — Développeuse web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil"><span class="brand-mark">S</span><span>Sanae<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#parcours">Parcours</a>
+        <a class="nav-contact" href="#contact">Me contacter <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="accueil">
+      <div class="hero-copy">
+        <div class="availability"><span class="status-dot"></span> Ouverte aux opportunités</div>
+        <p class="eyebrow">BONJOUR, JE SUIS</p>
+        <h1>Sanae<br><span class="accent-text">Boucham.</span></h1>
+        <h2>Développeuse <span>web & informatique</span></h2>
+        <p class="hero-description">Je transforme des idées en expériences web simples, modernes et utiles. J’aime apprendre, résoudre des problèmes et donner vie aux projets grâce au code.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projets">Voir mes projets <span>↘</span></a><a class="button button-light" href="#contact">Parlons ensemble</a></div>
+        <div class="hero-meta"><span>⌖ Maroc</span><span>✳ BTS — Développement des Applications Informatiques</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-blob blob-one"></div><div class="art-blob blob-two"></div>
+        <div class="code-window">
+          <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>hello-world.js</span><span class="window-mark">✳</span></div>
+          <div class="code-lines">
+            <p><span class="line-no">01</span><span class="code-purple">const</span> developer = {</p>
+            <p><span class="line-no">02</span>&nbsp;&nbsp;name: <span class="code-green">'Sanae'</span>,</p>
+            <p><span class="line-no">03</span>&nbsp;&nbsp;focus: <span class="code-green">'Web development'</span>,</p>
+            <p><span class="line-no">04</span>&nbsp;&nbsp;curiosity: <span class="code-orange">true</span>,</p>
+            <p><span class="line-no">05</span>&nbsp;&nbsp;learning: <span class="code-orange">true</span></p>
+            <p><span class="line-no">06</span>};</p>
+            <p class="code-comment"><span class="line-no">07</span>// Always building something new ✨</p>
+          </div>
+          <div class="window-footer"><span><i></i> Prête à créer</span><span>UTF-8&nbsp; · &nbsp;JavaScript</span></div>
+        </div>
+        <div class="floating-card float-top"><span class="float-icon">✦</span><span><b>Créativité</b><small>Des idées aux interfaces</small></span></div>
+        <div class="floating-card float-bottom"><span class="float-icon green">✓</span><span><b>Curiosité</b><small>Toujours en apprentissage</small></span></div>
+        <div class="hero-sticker">DESIGN<br><span>&</span> CODE</div>
+      </div>
+      <a class="scroll-hint" href="#apropos">DÉFILER POUR DÉCOUVRIR <span>↓</span></a>
+    </section>
+
+    <section class="section container" id="apropos">
+      <div class="section-kicker"><span>01</span> UN PEU À PROPOS</div>
+      <div class="about-grid">
+        <div><h2 class="section-title">Curieuse par nature.<br><span class="accent-text">Développeuse par passion.</span></h2></div>
+        <div class="about-text"><p>Titulaire d’un BTS en <strong>Développement des Applications Informatiques</strong>, je m’intéresse au développement web et à la création d’applications utiles.</p><p>Je souhaite continuer à renforcer mes compétences, explorer de nouvelles technologies et contribuer à des projets concrets dans un environnement stimulant.</p><a class="text-link" href="#contact">Faisons connaissance <span>↗</span></a></div>
+      </div>
+      <div class="stats-row"><div><strong>01</strong><span>Projet principal présenté</span></div><div><strong>02</strong><span>Stages professionnels</span></div><div><strong>∞</strong><span>Envie d’apprendre</span></div></div>
+    </section>
+
+    <section class="skills-section" id="competences">
+      <div class="container section">
+        <div class="section-kicker"><span>02</span> CE QUE JE SAIS FAIRE</div>
+        <div class="section-heading"><h2 class="section-title">Mes compétences<span class="accent-text">.</span></h2><p>Les technologies que j’ai étudiées et pratiquées au fil de ma formation et de mes projets.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card skill-pink"><div class="skill-icon">⌘</div><span class="skill-index">01 / WEB</span><h3>Développement web</h3><p>Construire des pages web structurées et des interfaces adaptées aux utilisateurs.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div></article>
+          <article class="skill-card skill-yellow"><div class="skill-icon">▤</div><span class="skill-index">02 / DATA</span><h3>Bases de données</h3><p>Organiser les données, concevoir des tables et réaliser des requêtes SQL.</p><div class="chips"><span>SQL</span><span>MySQL</span><span>PostgreSQL</span></div></article>
+          <article class="skill-card skill-blue"><div class="skill-icon">⌘</div><span class="skill-index">03 / CODE</span><h3>Programmation</h3><p>Appliquer la logique algorithmique et résoudre des problèmes avec du code.</p><div class="chips"><span>Python</span><span>Java</span><span>C</span><span>C#</span></div></article>
+          <article class="skill-card skill-green"><div class="skill-icon">◇</div><span class="skill-index">04 / TOOLS</span><h3>Outils & conception</h3><p>Utiliser les outils de développement et structurer les solutions.</p><div class="chips"><span>Git</span><span>GitHub</span><span>UML</span></div></article>
+        </div>
+        <p class="skill-note">* Le niveau peut varier selon la technologie. Je continue à pratiquer et à progresser.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="projets">
+      <div class="section-kicker"><span>03</span> QUELQUES RÉALISATIONS</div>
+      <div class="section-heading project-heading"><h2 class="section-title">Projet sélectionné<span class="accent-text">.</span></h2><p>Un aperçu d’un projet développé pendant mon parcours en informatique.</p></div>
+      <article class="project-card">
+        <div class="project-visual">
+         
+          
+          <img
+          class="website-photo"
+          src="images/image.png"
+          alt="Aperçu du projet TAMAN ZWIN"
+        />
+       
+          <span class="preview-caption">APERÇU VISUEL DU PROJET</span>
+        </div>
+        <div class="project-info"><span class="project-type"><i></i> E-COMMERCE · PROJET BTS</span><h3>TAMAN ZWIN</h3><p>Conception et développement d’une application e-commerce de vêtements. Le site permet de consulter les produits, parcourir les catégories et gérer le panier et les commandes.</p>
+          <ul><li>Catalogue de vêtements par catégories</li><li>Gestion des utilisateurs et du panier</li><li>Gestion des produits et des commandes</li></ul>
+          <div class="chips project-chips"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span></div>
+          <div class="project-actions"><a class="button button-primary" href="projet-taman-zwin.html">Demander des détails ↗</a><span class="private-note">Code source privé pour le moment</span></div>
+        </div>
+      </article>
+      
+<article class="project-card">
+  <div class="project-preview">
+    <img
+      class="website-photo"
+      src="images/imglunabeauty.png"
+      alt="Aperçu du site Luna Beauty"
+    />
+    <div class="preview-label">PROJET WEB</div>
+  </div>
+
+  <div class="project-info">
+    <p class="eyebrow">SITE VITRINE</p>
+    <h3>Luna Beauty</h3>
+
+    <p>
+      Conception et développement d’un site web
+      moderne pour un salon de beauté, avec
+      présentation des services, galerie photos
+      et prise de rendez-vous.
+    </p>
+
+    <div class="chips project-chips">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+          <div class="project-actions"><a class="button button-primary" href="projet-luna-beauty.html">Demander des détails ↗</a><span class="private-note">Code source privé pour le moment</span></div>
+
+  
+  </div>
+  
+</article>
+<article class="project-card">
+  <div class="project-preview">
+    <img
+      class="website-photo"
+      src="images/pgacceuilrest.png"
+      alt="Aperçu du site Luna Beauty"
+    />
+    <div class="preview-label">PROJET WEB</div>
+  </div>
+
+  <div class="project-info">
+    <p class="eyebrow">SITE VITRINE</p>
+    <h3>Maison du Goût.</h3>
+
+    <p>
+    Conception et développement d’un site web moderne et élégant pour un restaurant, avec un menu interactif, un système de réservation et une interface bilingue (français/anglais). Réalisé en HTML, CSS et JavaScript avec un design responsive.
+    </p>
+
+    <div class="chips project-chips">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+    </div>
+          <div class="project-actions"><a class="button button-primary" href="projet-maison-du-gout.html">Demander des détails ↗</a><span class="private-note">Code source privé pour le moment</span></div>
+
+  
+  </div>
+
+
+
+
+    </section>
+
+
+    <section class="journey-section" id="parcours"><div class="container section">
+      <div class="section-kicker"><span>04</span> MON PARCOURS</div><div class="section-heading"><h2 class="section-title">Formation & expérience<span class="accent-text">.</span></h2><p>Les étapes qui ont contribué à construire mes bases en informatique.</p></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-number">01</div><div class="timeline-content"><div class="timeline-meta"><span>FORMATION</span><span>DIPLÔME OBTENU</span></div><h3>BTS — Développement des Applications Informatiques</h3><p>Formation en programmation, développement d’applications, bases de données et conception de solutions informatiques.</p><div class="chips"><span>BTS DAI</span><span>Développement</span></div></div></article>
+        <article class="timeline-item"><div class="timeline-number">02</div><div class="timeline-content"><div class="timeline-meta"><span>EXPÉRIENCE</span><span>STAGES PROFESSIONNELS</span></div><h3>Direction provinciale de l’Éducation & Commune de Midelt</h3><p>Deux expériences de stage pour découvrir le milieu professionnel, appliquer mes acquis et développer mon sens de l’organisation.</p><div class="chips"><span>Travail en équipe</span><span>Découverte professionnelle</span></div></div></article>
+      </div>
+    </div></section>
+
+    <section class="contact-section" id="contact"><div class="container contact-inner">
+      <div><div class="section-kicker"><span>05</span> RESTONS EN CONTACT</div><h2 class="section-title">Une idée en tête ?<br><span class="accent-text">Construisons-la.</span></h2><p class="contact-description">Une opportunité, une collaboration ou simplement envie d’échanger ? Écrivez-moi, je serai ravie de vous répondre.</p></div>
+      <div class="contact-card"><div class="contact-icon">✉</div><span class="contact-label">ENVOYEZ-MOI UN E-MAIL</span><a class="email-link" href="mailto:bouchamsanae@gmail.com">bouchamsanae@gmail.com</a><button class="copy-email" type="button" data-email="bouchamsanae@gmail.com">Copier l’adresse <span>⧉</span></button><div class="contact-location">⌖ &nbsp; Maroc</div></div>
+    </div></section>
+  </main>
+  <footer class="footer container"><a class="brand" href="#accueil"><span class="brand-mark">S</span><span>Sanae<span class="brand-dot">.</span></span></a><p>Conçu avec curiosité et passion <span>♥</span></p><span>© <span id="year"></span> Sanae Boucham</span></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
