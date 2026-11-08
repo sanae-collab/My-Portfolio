@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luna Beauty — Présentation du projet</title>
+  <meta name="description" content="Découvrez le projet web Luna Beauty, un site vitrine élégant développé en HTML, CSS et JavaScript.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== BASE ===== */
+    .luna-page {
+      --luna-rose: #a56879;
+      --luna-dark: #30242a;
+      --luna-muted: #776d71;
+      --luna-bg: #fbf8f6;
+      --luna-line: #eee4e3;
+
+      background: var(--luna-bg);
+      color: var(--luna-dark);
+      font-family: "DM Sans", sans-serif;
+      min-height: 100vh;
+    }
+
+    .luna-page * {
+      box-sizing: border-box;
+    }
+
+    .luna-page h1,
+    .luna-page h2,
+    .luna-page h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+    }
+
+    .luna-container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .luna-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--luna-line);
+    }
+
+    .luna-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--luna-dark);
+      text-decoration: none;
+    }
+
+    .luna-logo span {
+      color: var(--luna-rose);
+    }
+
+    .luna-back {
+      text-decoration: none;
+      color: var(--luna-muted);
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .luna-back:hover {
+      color: var(--luna-rose);
+    }
+
+    /* ===== INTRODUCTION ===== */
+    .luna-intro {
+      padding: 85px 0 55px;
+      max-width: 850px;
+    }
+
+    .luna-label {
+      color: var(--luna-rose);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .luna-intro h1 {
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin: 20px 0;
+    }
+
+    .luna-intro h1 span {
+      color: var(--luna-rose);
+      font-style: italic;
+    }
+
+    .luna-lead {
+      color: var(--luna-muted);
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 690px;
+    }
+
+    .luna-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .luna-tags span {
+      border: 1px solid #e7d5da;
+      border-radius: 30px;
+      padding: 9px 15px;
+      color: #76515e;
+      font-size: 12px;
+      font-weight: 600;
+      background: #fffdfc;
+    }
+
+    /* ===== MAIN SCREENSHOT ===== */
+    .luna-main-preview {
+      margin: 10px 0 85px;
+    }
+
+    .luna-preview-frame {
+      overflow: hidden;
+      border: 1px solid var(--luna-line);
+      border-radius: 18px;
+      background: #f0e7e5;
+      box-shadow: 0 22px 60px rgba(68, 42, 49, 0.08);
+    }
+
+    .luna-preview-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 650px;
+      object-fit: contain;
+      object-position: top;
+    }
+
+    .luna-preview-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 3px;
+      color: var(--luna-muted);
+      font-size: 13px;
+    }
+
+    /* ===== PROJECT DETAILS ===== */
+    .luna-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      padding: 55px 0;
+      border-top: 1px solid var(--luna-line);
+      border-bottom: 1px solid var(--luna-line);
+    }
+
+    .luna-section-title {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 12px 0 20px;
+    }
+
+    .luna-text {
+      color: var(--luna-muted);
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .luna-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 0;
+    }
+
+    .luna-feature-list li {
+      display: flex;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--luna-line);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .luna-check {
+      color: var(--luna-rose);
+      font-weight: 700;
+    }
+
+    /* ===== GALLERY ===== */
+    .luna-gallery-section {
+      padding: 85px 0;
+    }
+
+    .luna-gallery-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .luna-gallery-heading .luna-section-title {
+      margin-bottom: 0;
+    }
+
+    .luna-gallery-heading p {
+      max-width: 350px;
+      margin: 0;
+    }
+
+    .luna-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .luna-shot {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .luna-shot-image {
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--luna-line);
+      background: #f0e7e5;
+    }
+
+    .luna-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .luna-shot:hover img {
+      transform: scale(1.025);
+    }
+
+    .luna-shot figcaption {
+      padding: 17px 2px;
+    }
+
+    .luna-shot-number {
+      color: var(--luna-rose);
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .luna-shot h3 {
+      font-size: 23px;
+      margin: 7px 0;
+    }
+
+    .luna-shot p {
+      color: var(--luna-muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ===== CONTACT ===== */
+    .luna-contact {
+      text-align: center;
+      background: #f2e6e8;
+      border-radius: 20px;
+      padding: 55px 25px;
+      margin-bottom: 70px;
+    }
+
+    .luna-contact h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      margin: 13px 0;
+    }
+
+    .luna-contact p {
+      color: var(--luna-muted);
+      line-height: 1.8;
+    }
+
+    .luna-contact-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 24px;
+      border-radius: 30px;
+      background: var(--luna-rose);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .luna-contact-link:hover {
+      background: #855163;
+    }
+
+    .luna-footer {
+      border-top: 1px solid var(--luna-line);
+      padding: 23px 0;
+      color: var(--luna-muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+      .luna-intro {
+        padding: 55px 0 35px;
+      }
+
+      .luna-main-preview {
+        margin-bottom: 55px;
+      }
+
+      .luna-details-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px 0;
+      }
+
+      .luna-gallery-heading {
+        display: block;
+      }
+
+      .luna-gallery-heading p {
+        margin-top: 15px;
+      }
+
+      .luna-gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .luna-preview-caption {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .luna-contact {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="luna-page">
+
+  <div class="luna-container">
+
+    <nav class="luna-nav">
+      <a href="index.html" class="luna-logo">
+        Luna <span>Beauty.</span>
+      </a>
+
+      <a href="index.html#projets" class="luna-back">
+        ← Retour au portfolio
+      </a>
+    </nav>
+
+    <header class="luna-intro">
+      <p class="luna-label">Étude de projet · 01</p>
+
+      <h1>
+        Une expérience digitale
+        <span>tout en douceur.</span>
+      </h1>
+
+      <p class="luna-lead">
+        Luna Beauty est un projet de site vitrine conçu pour
+        présenter un salon de beauté à travers une interface
+        élégante, une présentation claire des prestations et
+        une expérience adaptée aux différents écrans.
+      </p>
+
+      <div class="luna-tags">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+      </div>
+    </header>
+
+    <!-- CAPTURE PRINCIPALE -->
+    <section class="luna-main-preview">
+      <div class="luna-preview-frame">
+        <img
+          src="images/imglunabeauty.png"
+          alt="Capture principale du site Luna Beauty"
+        >
+      </div>
+
+      <div class="luna-preview-caption">
+        <span>APERÇU DU PROJET</span>
+        <span>Site vitrine · Interface web</span>
+      </div>
+    </section>
+
+    <!-- PRESENTATION -->
+    <section class="luna-details-grid">
+
+      <div>
+        <p class="luna-label">À propos</p>
+
+        <h2 class="luna-section-title">
+          L'idée derrière le projet
+        </h2>
+
+        <p class="luna-text">
+          L'objectif de Luna Beauty est de proposer une présence
+          en ligne soignée pour un salon de beauté. Le site met
+          en avant son univers visuel, ses prestations et les
+          moyens de prendre contact facilement.
+        </p>
+
+        <p class="luna-text">
+          Le design s'appuie sur une palette douce, une
+          typographie élégante et une organisation claire
+          du contenu pour offrir une navigation agréable.
+        </p>
+      </div>
+
+      <div>
+        <p class="luna-label">Fonctionnalités</p>
+
+        <h2 class="luna-section-title">
+          Ce que propose le site
+        </h2>
+
+        <ul class="luna-feature-list">
+          <li>
+            <span class="luna-check">✦</span>
+            Présentation du salon et de son univers
+          </li>
+          <li>
+            <span class="luna-check">✦</span>
+            Section dédiée aux services et aux tarifs
+          </li>
+          <li>
+            <span class="luna-check">✦</span>
+            Galerie visuelle des prestations
+          </li>
+          <li>
+            <span class="luna-check">✦</span>
+            Accès aux informations de contact
+          </li>
+          <li>
+            <span class="luna-check">✦</span>
+            Navigation adaptée aux petits écrans
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- GALERIE -->
+    <section class="luna-gallery-section">
+
+      <div class="luna-gallery-heading">
+        <div>
+          <p class="luna-label">En images</p>
+          <h2 class="luna-section-title">
+            Les détails du site
+          </h2>
+        </div>
+
+        <p class="luna-text">
+          Découvrez les différentes sections et le travail
+          réalisé sur l'interface.
+        </p>
+      </div>
+
+      <div class="luna-gallery">
+
+        <figure class="luna-shot">
+          <div class="luna-shot-image">
+            <img
+              src="images/Screenshot 2026-10-17 213100.png"
+              alt="Capture de la section services"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            <span class="luna-shot-number">01 / SERVICES</span>
+            <h3>Les prestations</h3>
+            <p>
+              Une présentation organisée des services proposés
+              et des tarifs du salon.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure class="luna-shot">
+          <div class="luna-shot-image">
+            <img
+              src="images/galerieluna.png"
+              alt="Capture de la galerie Luna Beauty"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            <span class="luna-shot-number">02 / GALERIE</span>
+            <h3>L'univers visuel</h3>
+            <p>
+              Une galerie qui met en valeur l'ambiance et
+              l'identité visuelle du site.
+            </p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="luna-details-grid">
+
+      <div>
+        <p class="luna-label">Technologies</p>
+
+        <h2 class="luna-section-title">
+          Les outils utilisés
+        </h2>
+      </div>
+
+      <div>
+        <p class="luna-text">
+          <strong>HTML5</strong> — Structure et organisation
+          du contenu.
+        </p>
+
+        <p class="luna-text">
+          <strong>CSS3</strong> — Mise en page, couleurs,
+          typographie et adaptation responsive.
+        </p>
+
+        <p class="luna-text">
+          <strong>JavaScript</strong> — Interactions et
+          comportement dynamique de l'interface.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="luna-contact">
+      <p class="luna-label">Vous avez une idée ?</p>
+
+      <h2>Construisons quelque chose ensemble.</h2>
+
+      <p>
+        Consultez mon portfolio pour découvrir mes autres projets.
+      </p>
+
+      <a
+        href="index.html#contact"
+        class="luna-contact-link"
+      >
+        Me contacter ↗
+      </a>
+    </section>
+
+    <footer class="luna-footer">
+      © 2026 · Luna Beauty — Projet de développement web
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
